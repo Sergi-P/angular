@@ -10,6 +10,8 @@ export class ListadoComponent{
 
   heroes:string[]=['Spider-Man', 'Iron-Man','Capitan America','Hulk'];
   borrado :string="";
+  seleccionado :string="";
+  
   borrarHeroe(){
     if(this.heroes.length==0){
       this.borrado ="";
@@ -22,4 +24,12 @@ export class ListadoComponent{
     this.heroes=['Spider-Man', 'Iron-Man','Capitan America','Hulk'];
     this.borrado="";
   }
+
+    seleccionarHeroe(heroe:string){
+      this.seleccionado=heroe;
+     
+    }
+
+
+
 }

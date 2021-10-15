@@ -1,5 +1,5 @@
 <ul class="list-group">
-    <li class="list-group-item" *ngFor="let heroe of heroes">{{ heroe }}</li>
+    <li (click)="seleccionarHeroe(heroe)" class="list-group-item" *ngFor="let heroe of heroes">{{ heroe }}</li>
     </ul>
 
 
@@ -8,3 +8,7 @@
 
      <p *ngIf="borrado!='';else noBorrado">se ha borrado el heroe {{borrado}}</p>
   <ng-template #noBorrado><p>No se ha borrado ningun heroe.</p></ng-template> 
+
+
+  <p *ngIf="seleccionado!='';else noSelect">Se ha seleccionado el heroe {{seleccionado}}</p>
+  <ng-template #noSelect><p>No se ha seleccionado ningun heroe.</p></ng-template> 
