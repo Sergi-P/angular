@@ -20,6 +20,6 @@ import { ListadoComponent } from './heroes/listado/listado/listado.component';
     BrowserModule
   ],
   providers: [],
-  bootstrap: [HeroeComponent, ListadoComponent]
+  bootstrap: [ContadorComponent,HeroeComponent, ListadoComponent]
 })
 export class AppModule { }
