@@ -1,0 +1,10 @@
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let heroe of heroes">{{ heroe }}</li>
+    </ul>
+
+
+    <button (click)="borrarHeroe()">Borrar Heroe</button>
+    <button (click)="reiniciar()">Reiniciar Listado</button>
+
+     <p *ngIf="borrado!='';else noBorrado">se ha borrado el heroe {{borrado}}</p>
+  <ng-template #noBorrado><p>No se ha borrado ningun heroe.</p></ng-template> 
