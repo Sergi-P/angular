@@ -3,7 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
-import { ContadorComponent } from './contador/contador.component';
+import { ContadorModule } from "./contador/contador.module";
+
+ import { DbzModule } from "./dbz/dbz.module";
+
 
 import { HeroeComponent } from './heroes/heroe/heroe.component';
 import { ListadoComponent } from './heroes/listado/listado/listado.component';
@@ -11,15 +14,15 @@ import { ListadoComponent } from './heroes/listado/listado/listado.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ContadorComponent,
     HeroeComponent,
-    ListadoComponent,
-    
+    ListadoComponent    
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ContadorModule,
+    DbzModule
   ],
   providers: [],
-  bootstrap: [ContadorComponent,HeroeComponent, ListadoComponent]
+  bootstrap: [AppComponent ]
 })
 export class AppModule { }
