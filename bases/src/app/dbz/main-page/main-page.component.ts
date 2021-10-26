@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { NgForm } from '@angular/forms';
-
+import { Personaje } from '../interfaces/dbz.interfaces';
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
@@ -32,25 +32,15 @@ export class MainPageComponent{
 personajes:Personaje[]=[this.p1,this.p2,this.p3,this.p4,this.p5];
 
 
-anadirPersonaje(itemForm:NgForm){
-
-  let personaje: Personaje={
-    nombre:itemForm.value.nombre,
-    poder:itemForm.value.poder
-  }
-
-  this.personajes.push(personaje);
-  }
+anadirPersonaje(data:Personaje){
+  this.personajes.push(data);
+}
 
 
 }
 
 
-interface Personaje {
-  nombre: String;
-  poder: number;
-  
-};
+
 
 
 

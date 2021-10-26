@@ -1,0 +1,11 @@
+
+  <h1>---------------------------------------------------------------</h1>
+  <form (ngSubmit)="anadirPersonaje()">
+    <label>Nombre </label>
+    <input id="nombrePj"  type="text" name="nombre" [(ngModel)]="personaje.nombre"/>
+                        
+    <label>Poder</label>
+    <input id="poderPj" type="number" name="poder" [(ngModel)]="personaje.poder"/>
+    
+    <input type="submit" value="Introducir">
+    </form>   
